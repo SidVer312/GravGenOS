@@ -1,56 +1,45 @@
-org 0x7C00
+org 0x0
 bits 16
+
 
 %define ENDL 0x0D, 0x0A
 
+
 start:
-  jmp main
-
-;printing a string to the screen
-;params: ds:si - points to string
-
-puts:
-  push si
-  push ax
-
-.loop:
-  lodsb ;loads next character in al
-  or al, al ;check if null
-  jz .done
-  
-  mov ah, 0x0e
-  int 0x10
-  jmp .loop
-
-.done:
-  pop ax
-  pop si
-  ret
-
-
-main: 
-  
-  ;setup data segment
-  mov ax, 0  ;since cannot write to ds/es directly
-  mov ds, ax
-  mov es, ax
-
-  ;setup stack
-  mov ss, ax
-  mov sp, 0x7C00
-  
-  ;print message
-  mov si, msg_hello
-  call puts
-
-  hlt
+    ; print hello world
+    mov si, msg_hello
+    call puts
 
 .halt:
-  jmp .halt
+    cli
+    hlt
 
-msg_hello: db 'Hello World!', ENDL, 0
+;
+; Prints a string to the screen
+; Params:
+;   - ds:si points to string
+;
+puts:
+    ; save registers that will be modified
+    push si
+    push ax
+    push bx
 
-times 510-($-$$) db 0
-dw 0AA55h
+.loop:
+    lodsb               ; loads next character in al
+    or al, al           ; verify if next character is null
+    jz .done
 
+    mov ah, 0x0E        ; call bios interrupt
+    mov bh, 0           ; set page number to 0
+    int 0x10
 
+    jmp .loop
+
+.done:
+    pop bx
+    pop ax
+    pop si    
+    ret
+
+msg_hello: db 'Hello world from the kernel!', ENDL, 0
