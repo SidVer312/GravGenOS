@@ -29,12 +29,13 @@ bdb_large_sector_count:     dd 0
 ebr_drive_number:           db 0                    ; 0x00 floppy, 0x80 hdd, useless
                             db 0                    ; reserved
 ebr_signature:              db 29h
-ebr_volume_id:              db 12h, 34h, 56h, 78h   ; serial number, value doesn't matter
+ebr_volume_id:              db 12h, 34h, 56h, 78h   ; serial number, value doesnt matter
 ebr_volume_label:           db 'GRAVGEN OS '        ; 11 bytes, padded with spaces
 ebr_system_id:              db 'FAT12   '           ; 8 bytes
 
 ;
-; Code goes here
+; rest of the code
+
 ;
 
 start:
@@ -54,7 +55,7 @@ puts:
 
 .loop:
     lodsb               ; loads next character in al
-    or al, al           ; verify if next character is null?
+    or al, al           ; check of next character is null
     jz .done
 
     mov ah, 0x0E        ; call bios interrupt
@@ -78,9 +79,9 @@ main:
     
     ; setup stack
     mov ss, ax
-    mov sp, 0x7C00              ; stack grows downwards from where we are loaded in memory
+    mov sp, 0x7C00              ; stack grows downwards from where we are in memory
 
-    ; read something from floppy disk
+    ; read sfrom floppy disk
     ; BIOS should set DL to drive number
     mov [ebr_drive_number], dl
 
