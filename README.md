@@ -2,18 +2,20 @@ Decided to make my own Operating System, purely to understand Low Level Hardware
 
 
 #### Update 11/03/24:
-  Reads from FAT12 in Bootloader
-  Nearly hit 512B limit for boot sector
+- Optimization of bootloader
+- Reads from FAT12 in Bootloader
+- C implementation of the same
+- Nearly hit 512B limit for boot sector
 
 #### Update 10/03/24:
-  Reads from disk
-  Added config for Bochs
-  Switch to qemu
+- Reads from disk
+- Added config for Bochs
+- Switch to qemu
 
 #### Update 18/01/24:
-  Initializes for FAT
+- Initializes for FAT
 
 
 #### Update 04/01/24:
-  Boots up into a Hello World screen
+- Boots up into a Hello World screen
 
