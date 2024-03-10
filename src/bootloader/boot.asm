@@ -48,7 +48,7 @@ start:
 ;   - ds:si points to string
 ;
 puts:
-    ; save registers we will modify
+    ; save registers that will be modified
     push si
     push ax
     push bx
@@ -81,7 +81,7 @@ main:
     mov ss, ax
     mov sp, 0x7C00              ; stack grows downwards from where we are in memory
 
-    ; read sfrom floppy disk
+    ; read from floppy disk
     ; BIOS should set DL to drive number
     mov [ebr_drive_number], dl
 
