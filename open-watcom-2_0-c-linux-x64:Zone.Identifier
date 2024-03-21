@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://github.com/open-watcom/open-watcom-v2/releases/tag/Current-build
+HostUrl=https://objects.githubusercontent.com/github-production-release-asset-2e65be/5390641/ee6948b9-ed0e-41eb-890d-de09b3449daf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240311%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240311T172812Z&X-Amz-Expires=300&X-Amz-Signature=05319c8e4959634b35840831de3b4bdb0e6fb858ab34eb25533f0e4c0d936ce2&X-Amz-SignedHeaders=host&actor_id=57825216&key_id=0&repo_id=5390641&response-content-disposition=attachment%3B%20filename%3Dopen-watcom-2_0-c-linux-x64&response-content-type=application%2Foctet-stream

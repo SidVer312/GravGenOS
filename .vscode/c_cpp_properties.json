@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "Watcom",
+            "includePath": [
+                "/home/sid/Programming/Ongoing/OsDev/**"
+            ],
+            "defines": [
+                "_cdecl"
+            ],
+            "compilerPath": "/usr/bin/watcom/binl/wcc",
+            "cStandard": "c99",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerArgs": [
+                "-4 -d3 -s -wx -ms -zl -zq"
+            ],
+            "compilerPathInCppPropertiesJson": "/usr/bin/watcom/binl/wcc",
+            "mergeConfigurations": false,
+            "browse": {
+                "path": [
+                    "/home/sid/Programming/Ongoing/OsDev/**",
+                    "${workspaceFolder}"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}

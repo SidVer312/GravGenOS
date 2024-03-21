@@ -1,0 +1,76 @@
+Open Watcom Linker Version 2.0 beta Mar 11 2024 01:43:40 (32-bit)
+Copyright (c) 2002-2024 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       24/03/21 17:37:49
+Executable Image: /home/sid/Programming/Ongoing/OsDev/build/stage2.bin
+creating a RAW Binary Image executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          00000022             00000000
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+_ENTRY                 CODE           AUTO           00000000        00000013
+_TEXT                  CODE           AUTO           00000013        0000000f
+CONST                  DATA           DGROUP         00000022        00000000
+CONST2                 DATA           DGROUP         00000022        00000000
+_DATA                  DATA           DGROUP         00000022        00000000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: /home/sid/Programming/Ongoing/OsDev/build/stage2/asm/main.obj(main.asm)
+00000000       entry
+Module: /home/sid/Programming/Ongoing/OsDev/build/stage2/c/main.obj(/home/sid/Programming/Ongoing/OsDev/src/bootloader/stage2/main.c)
+00000013       _cstart_
+
+
+                        +---------------------+
+                        |   Module Segments   |
+                        +---------------------+
+
+! = 32-bit segment
+c = initialized communal data
+
+Module          Segment               Class           Address         Size
+======          =======               =====           =======         ====
+
+main.asm        _ENTRY                CODE           00000000         00000013
+/home/sid/Programming/Ongoing/OsDev/src/bootloader/stage2/main.c
+                _TEXT                 CODE           00000013         0000000f
+                CONST                 DATA           00000022         00000000
+                CONST2                DATA           00000022         00000000
+                _DATA                 DATA           00000022         00000000
+Warning! W1014: stack segment not found
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0200 (512.)
+Memory size:  0022 (34.)
+Entry point address: 00000000
+Link time: 00:00.10
