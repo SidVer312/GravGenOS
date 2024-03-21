@@ -1,6 +1,13 @@
 Decided to make my own Operating System, purely to understand Low Level Hardware and Programming
 
 
+#### Update 21/03/24:
+- Initializing for C using Watcom
+- Linker
+- Completed main asm file of Stage 2 of Bootloader
+- Preparations for printf implementation
+
+
 #### Update 11/03/24:
 - Optimization of bootloader
 - Reads from FAT12 in Bootloader
