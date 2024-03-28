@@ -1,4 +1,5 @@
 Decided to make my own Operating System, purely to understand Low Level Hardware and Programming
+Based on Nanobyte-dev's OS series
 
 
 #### Update 21/03/24:
