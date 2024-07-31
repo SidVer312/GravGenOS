@@ -17,8 +17,8 @@ _x86_Video_WriteCharTeletype:
     push bx
 
     ; [bp + 0] - old call frame
-    ; [bp + 2] - return address (small memory model => 2 bytes)
-    ; [bp + 4] - first argument (character)
+    ; [bp + 2] - return address (small memory model 2 bytes)
+    ; [bp + 4] - first argument (char)
     ; [bp + 6] - second argument (page)
     ; bytes converted to words (can't push a single byte on stack)
     mov ah, 0Eh

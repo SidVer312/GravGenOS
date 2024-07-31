@@ -2,6 +2,10 @@ Decided to make my own Operating System, purely to understand Low Level Hardware
 Based on Nanobyte-dev's OS series
 
 
+#### Update 31/07/24:
+Finally Back, wrapping up C part of stage 2 bootloader
+
+
 #### Update 21/03/24:
 - Initializing for C using Watcom
 - Linker
